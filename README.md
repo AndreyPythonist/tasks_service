@@ -1,30 +1,17 @@
-# REST API Organization
-Реализация апи сервиса согласно требованиям технического задания: "Функционал приложения" Технического задания "Организация"
+# REST API TaskService
+Реализация апи TaskService
 
 ## Запуск
-Docker:
 ```
-docker compose up 
+pip install -r requirements.txt
 ```
-
-## Документация API
-Swagger UI:
 ```
-http://host:port/docs
+python manage.py makemigrations
 ```
-
-Redoc:
 ```
-http://host:port/redoc
+python manage.py migrate
 ```
-
-## Работа с API
-Статический API ключ (API_KEY) для аутентификации:
 ```
-app/settings.py
+python manage.py runserver
 ```
-
-Данные для тестирования роутов (тестовые данные):
-```
-migrations/dumps/model.dump
-```
+Перейти по адресу /tasks

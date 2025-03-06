@@ -7,7 +7,7 @@ from .models import Tasks
 from .serializers import TasksSerializer
 
 
-class GetTaskInfoView(APIView):
+class TaskView(APIView):
     def get(self, request):
         queryset = Tasks.objects.all()
         serializer_for_queryset = TasksSerializer(
